@@ -1,0 +1,25 @@
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+  Encyclopedia - {{title}}
+{% endblock %}
+{% block body %}
+  <style>
+    textarea {
+        margin: 20px;
+        height: 30vh;
+        width: 41%;
+    }
+    .text{
+        margin: 20px;
+        margin-bottom: 10px;
+    }
+    html{
+        overflow: hidden;
+    }
+  </style>
+  <form action="/save">
+    <input class="text" type="text" name="title" value="{{title}}"><br>
+    <textarea name="content" id="" cols="5" rows="1">{{entry}}</textarea><br>
+    <input type="submit" class="btn btn-primary" style="margin: 20px; margin-top:10px;" value="Submit">
+  </form>
+{% endblock %}
